@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<ProductList addItemToCart={addItemToCart} />} />
+        <Route path="/" element={<ProductList cart={cart} addItemToCart={addItemToCart} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<Cart cart={cart} />} />
