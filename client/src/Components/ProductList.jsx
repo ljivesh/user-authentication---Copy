@@ -8,9 +8,9 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Navbar from "../pages/Navbar";
 
-function ProductList({addItemToCart}) {
+function ProductList({cart, addItemToCart}) {
   const [search, setSearch] = useState("");
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
   const [showCart, setShowCart] = useState(false);
 
