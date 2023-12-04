@@ -8,14 +8,16 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Navbar from "../pages/Navbar";
 
-function ProductList() {
+function ProductList({addItemToCart}) {
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
 
   const [showCart, setShowCart] = useState(false);
 
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
+    // setCart((prevCart) => [...prevCart, item]);
+
+    addItemToCart(item);
     console.log("Cart after adding item:", cart);
   };
 
