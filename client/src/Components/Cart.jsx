@@ -2,13 +2,14 @@
 import React from "react";
 
 function Cart({ cart }) {
-  console.log("Cart in Cart component:", cart);
+  cart && console.log("Cart in Cart component:", cart);
 
   return (
+    
     <div>
       <h2>Cart</h2>
 
-      <p>Your cart is empty</p>
+       cart.length === 0 && <p>Your cart is empty</p>
 
       <ul>
         {cart.map((item, index) => (
